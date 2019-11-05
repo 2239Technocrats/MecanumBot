@@ -18,7 +18,10 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import frc.robot.VelocityTalon;
 // Commands
-import frc.robot.commands.TDrive;
+import frc.robot.commands.MDrive;
+
+import frc.robot.subsystems.Facing;
+
 /**
  * An example subsystem.  You can replace me with your own Subsystem.
  */
@@ -31,8 +34,7 @@ public class Drivetrain extends Subsystem {
   public boolean mode = true;
   public double speed = .1;
   public int controller = 0;
-  public boolean flipped = true;
-  public boolean ULTRASUPERMEGACOOLMODE = false;
+  public Facing direction = Facing.Forward;
   public WPI_TalonSRX leftMotorM;
   // public WPI_VictorSPX leftMotorS;
   public WPI_TalonSRX leftMotorS;
@@ -73,7 +75,7 @@ public class Drivetrain extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new TDrive());
+    setDefaultCommand(new MDrive());
 
   }
 
@@ -102,19 +104,11 @@ public class Drivetrain extends Subsystem {
    * 
    * @param state true for cargo forward, false for hatch forward.
    */
-  public void setFlipped(boolean state){
-    flipped = state;
+  public void setDirection(Facing state){
+    direction = state;
   }
 
-  public boolean isFlipped(){
-    return flipped;
-  }
-
-  public void setULTRASUPERMEGACOOLMODE(boolean state){
-    ULTRASUPERMEGACOOLMODE = state;
-  }
-
-  public boolean isULTRASUPERMEGACOOLMODE(){
-    return ULTRASUPERMEGACOOLMODE;
+  public Facing getDirection(){
+    return direction;
   }
 }

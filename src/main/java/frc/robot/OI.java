@@ -80,7 +80,7 @@ public class OI {
     // b5.whenPressed(new ToggleHatchManipulator());
     // b7.whenPressed(new ToggleDrivingMode());
     // b8.whenPressed(new ToggleDrivingMode());
-    b7.whenPressed(new SideDrive());
+    b7.whenPressed(new FlipDrive());
     b8.whenPressed(new FlipDrive());
     b1.whenPressed(new TurnTest1(.5));
     b2.whenPressed(new TurnTest1(0));
