@@ -84,6 +84,7 @@ public class OI {
     b8.whenPressed(new FlipDrive());
     b1.whenPressed(new TurnTest1(.5));
     b2.whenPressed(new TurnTest1(0));
+    b3.whenPressed(new TurnTest1(18000));
 
     // j3.whileHeld(new SetBMSpeed(testJoystick.getRawAxis(1)));
     // j3.whenPressed(new setBMHeight(GROUND_POSITION));

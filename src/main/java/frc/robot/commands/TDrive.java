@@ -36,22 +36,22 @@ public class TDrive extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    // flipped = Robot.drivetrain.isFlipped();
-    // speed = Robot.drivetrain.speed;
-    // System.out.println(Robot.drivetrain.flipped);
-    // System.out.println("execute(); on tankdrive");
-    // if(Robot.drivetrain.flipped && !Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
-    //   drive.driveCartesian(-speed*controller.getRawAxis(1), speed*controller.getRawAxis(0), .6*speed*controller.getRawAxis(4));
-    // }
-    // else if(Robot.drivetrain.flipped && Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
-    //   drive.driveCartesian(-speed*controller.getRawAxis(0), -speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
-    // }
-    // else if(!Robot.drivetrain.flipped && Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
-    //   drive.driveCartesian(speed*controller.getRawAxis(0), speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
-    // }
-    // else{
-    //   drive.driveCartesian(speed*controller.getRawAxis(1), -speed*controller.getRawAxis(0), .6*-speed*controller.getRawAxis(4));
-    // }
+    flipped = Robot.drivetrain.isFlipped();
+    speed = Robot.drivetrain.speed;
+    System.out.println(Robot.drivetrain.flipped);
+    System.out.println("execute(); on tankdrive");
+    if(Robot.drivetrain.flipped && !Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
+      drive.driveCartesian(-speed*controller.getRawAxis(1), speed*controller.getRawAxis(0), .6*speed*controller.getRawAxis(4));
+    }
+    else if(Robot.drivetrain.flipped && Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
+      drive.driveCartesian(-speed*controller.getRawAxis(0), -speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
+    }
+    else if(!Robot.drivetrain.flipped && Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
+      drive.driveCartesian(speed*controller.getRawAxis(0), speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
+    }
+    else{
+      drive.driveCartesian(speed*controller.getRawAxis(1), -speed*controller.getRawAxis(0), .6*-speed*controller.getRawAxis(4));
+    }
   }
 
   // Make this return true when this Command no longer needs to run execute()
