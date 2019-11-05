@@ -41,16 +41,16 @@ public class TDrive extends Command {
     System.out.println(Robot.drivetrain.flipped);
     System.out.println("execute(); on tankdrive");
     if(Robot.drivetrain.flipped && !Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
-      drive.driveCartesian(-speed*controller.getRawAxis(1), speed*controller.getRawAxis(0), speed*controller.getRawAxis(4));
+      drive.driveCartesian(-speed*controller.getRawAxis(1), speed*controller.getRawAxis(0), .6*speed*controller.getRawAxis(4));
     }
     else if(Robot.drivetrain.flipped && Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
-      drive.driveCartesian(-speed*controller.getRawAxis(0), -speed*controller.getRawAxis(1), speed*controller.getRawAxis(4));
+      drive.driveCartesian(-speed*controller.getRawAxis(0), -speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
     }
     else if(!Robot.drivetrain.flipped && Robot.drivetrain.ULTRASUPERMEGACOOLMODE){
-      drive.driveCartesian(speed*controller.getRawAxis(0), speed*controller.getRawAxis(1), speed*controller.getRawAxis(4));
+      drive.driveCartesian(speed*controller.getRawAxis(0), speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
     }
     else{
-      drive.driveCartesian(speed*controller.getRawAxis(1), -speed*controller.getRawAxis(0), -speed*controller.getRawAxis(4));
+      drive.driveCartesian(speed*controller.getRawAxis(1), -speed*controller.getRawAxis(0), .6*-speed*controller.getRawAxis(4));
     }
   }
 

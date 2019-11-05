@@ -82,6 +82,8 @@ public class OI {
     // b8.whenPressed(new ToggleDrivingMode());
     b7.whenPressed(new SideDrive());
     b8.whenPressed(new FlipDrive());
+    b1.whenPressed(new TurnTest1(.5));
+    b2.whenPressed(new TurnTest1(0));
 
     // j3.whileHeld(new SetBMSpeed(testJoystick.getRawAxis(1)));
     // j3.whenPressed(new setBMHeight(GROUND_POSITION));
@@ -100,10 +102,10 @@ public class OI {
     
 
 
-    up.whenPressed(new SetDriveSpeed(.4));
-    left.whenPressed(new SetDriveSpeed(.3));
-    down.whenPressed(new SetDriveSpeed(.2));
-    right.whenPressed(new SetDriveSpeed(.1));
+    up.whenPressed(new SetDriveSpeed(1));
+    left.whenPressed(new SetDriveSpeed(.60));
+    down.whenPressed(new SetDriveSpeed(.4));
+    right.whenPressed(new SetDriveSpeed(.2));
 
   }
 

@@ -57,9 +57,6 @@ public class Drivetrain extends Subsystem {
     leftMotorS.setExpiration(0.5);
     rightMotorM.setExpiration(0.5);
     rightMotorS.setExpiration(0.5);
-    left = new SpeedControllerGroup(leftMotorM, leftMotorS);
-    right = new SpeedControllerGroup(rightMotorM, rightMotorS);
-    left = new SpeedControllerGroup(leftMotorM, leftMotorS);
 
 
 

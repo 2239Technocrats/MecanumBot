@@ -63,6 +63,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void disabledInit() {
+    test1.testM.setSelectedSensorPosition(0, test1.PIDFloopID, test1.timeoutMs);
   }
 
   @Override
