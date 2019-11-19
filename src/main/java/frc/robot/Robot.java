@@ -37,6 +37,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
+    test1.testM.setSelectedSensorPosition(0, test1.PIDFloopID, test1.timeoutMs);
     oi = new OI(drivetrain);
     // m_chooser.addDefault("Default Auto", new ExampleCommand());
     // // chooser.addObject("My Auto", new MyAutoCommand());
@@ -63,7 +64,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void disabledInit() {
-    test1.testM.setSelectedSensorPosition(0, test1.PIDFloopID, test1.timeoutMs);
   }
 
   @Override

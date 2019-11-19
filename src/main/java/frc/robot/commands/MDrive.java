@@ -36,32 +36,32 @@ public class MDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        speed = Robot.drivetrain.speed;
-        System.out.println(Robot.drivetrain.direction);
-        System.out.println("execute(); on tankdrive");
-        switch (Robot.drivetrain.getDirection()) {
-            case Forward:
-                drive.driveCartesian(speed*controller.getRawAxis(1), -speed*controller.getRawAxis(0), .6*-speed*controller.getRawAxis(4));
-                break;
-            case Right:
-            drive.driveCartesian(speed*controller.getRawAxis(0), speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
-                break;
-            case Backward:
-                drive.driveCartesian(-speed*controller.getRawAxis(1), speed*controller.getRawAxis(0), .6*speed*controller.getRawAxis(4));
-                break;
-            case Left:
-                drive.driveCartesian(-speed*controller.getRawAxis(0), -speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
-                break;
-        }
+        // speed = Robot.drivetrain.speed;
+        // System.out.println(Robot.drivetrain.direction);
+        // System.out.println("execute(); on tankdrive");
+        // switch (Robot.drivetrain.getDirection()) {
+        //     case Forward:
+        //         drive.driveCartesian(speed*controller.getRawAxis(1), -speed*controller.getRawAxis(0), .6*-speed*controller.getRawAxis(4));
+        //         break;
+        //     case Right:
+        //     drive.driveCartesian(speed*controller.getRawAxis(0), speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
+        //         break;
+        //     case Backward:
+        //         drive.driveCartesian(-speed*controller.getRawAxis(1), speed*controller.getRawAxis(0), .6*speed*controller.getRawAxis(4));
+        //         break;
+        //     case Left:
+        //         drive.driveCartesian(-speed*controller.getRawAxis(0), -speed*controller.getRawAxis(1), .6*speed*controller.getRawAxis(4));
+        //         break;
+        // }
+        drive.driveCartesian(0,0,0);
     }
-
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
         // System.out.println("isFinished(); on exampleCommand")
         return false;
     }
-     
+
     // Called once after isFinished returns true
     @Override
     protected void end() {

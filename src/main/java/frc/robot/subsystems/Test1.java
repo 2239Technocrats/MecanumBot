@@ -33,12 +33,11 @@ public class Test1 extends Subsystem {
     testM = new WPI_TalonSRX(5);
     testM.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute, PIDFloopID, timeoutMs);
     testM.selectProfileSlot(0, PIDFloopID);
-    
   }
 
   @Override
   public void initDefaultCommand() {
-    //setDefaultCommand(new DefaultTest1());
+    setDefaultCommand(new DefaultTest1());
   }
 
   public WPI_TalonSRX getMotor() {
